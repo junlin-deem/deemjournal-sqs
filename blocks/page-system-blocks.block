@@ -1,0 +1,18 @@
+<div class="system-blocks">
+    <div class="-exp -wrap">
+        <h1>Deem System Blocks</h1>
+        <p>Important system blocks for internal API features of the Squarespace platform.</p>
+    </div>
+    <div class="system-blocks__newsletter -exp -wrap">
+        <em class="label">Newsletter</em>
+        <div class="">
+            <squarespace:block-field id="deem--newsletter" columns="12" />
+        </div>
+    </div>
+    <div class="system-blocks__search -exp -wrap">
+        <em class="label">Search</em>
+        <div class="">
+            <squarespace:block-field id="deem--search" columns="12" />
+        </div>
+    </div>
+</div>
