@@ -1,0 +1,8 @@
+<div class="story -exp">
+    <div class="story__masthead -wrap">
+        <h1>{item.title}</h1>
+    </div>
+    <div class="story__blocks -exp">
+        {item.body}
+    </div>
+</div>
