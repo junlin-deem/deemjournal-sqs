@@ -35,7 +35,7 @@
     <div class="media js-media {.if info}{.if info.stretch}media--stretch{.or}media--wrap{.end}{.end}">
         <img class="media__node js-media-node image js-lazy-image" data-img-src="{@media.assetUrl}" data-variants="{@media.systemDataVariants}" data-original-size="{@media.originalSize}" {.if @mobile}data-mobile="{@mobile|json|htmlattr}"{.end} />
         {.if @caption}
-            <div class="media__cap m -grey">{@caption}</div>
+            <div class="media__cap m">{@caption}</div>
         {.end}
     </div>
 {.end}
