@@ -1,0 +1,34 @@
+<menu class="meni js-meni">
+    <div class="meni__search">
+        <div class="meni__search__icon js-meni-search">
+            {@|apply svg-search.block}
+        </div>
+    </div>
+    <nav class="meni__menu" data-content-field="menigation-menu">
+        <ul class="meni__navi">
+            {.repeated section items}
+                {.if collection}
+                    {.var @title collection.title}
+                    {.var @url collection.fullUrl}
+                {.end}
+                {.if externalLink}
+                    {.var @title externalLink.title}
+                    {.var @url externalLink.url}
+                {.end}
+                <li class="meni__li meni__li--{@title|slugify}">
+                    <a class="meni__a meni__a--{@title|slugify} js-meni-a js-meni--{@title|slugify} p" href="{@url}">{@title}</a>
+                </li>
+            {.end}
+            {# Iterate website.socialAccounts #}
+            <li class="meni__li meni__li--instagram">
+                <a class="meni__a meni__a--instagram js-meni-ext js-meni--instagram m" href="#">Instagram</a>
+            </li>
+            <li class="meni__li meni__li--soundcloud">
+                <a class="meni__a meni__a--soundcloud js-meni-ext js-meni--soundcloud m" href="#">Soundcloud</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="meni__footer">
+        <div class="m">Made by <a class="js-meni-ext" href="http://roomformagic.com" target="_blank">Room For Magic</a></div>
+    </div>
+</menu>
