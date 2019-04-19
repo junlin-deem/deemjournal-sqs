@@ -1,7 +1,8 @@
 <menu class="meni js-meni">
     <div class="meni__fill js-meni-fill"></div>
     <div class="meni__query js-meni-query">
-        <div class="search js-search meni__search" data-id="5cafe53bb208fcfd8dc661dd"></div>
+        <div class="search js-search meni__search" data-id="5cafe53bb208fcfd8dc661dd" data-results=".js-search-results"></div>
+        <div class="results js-search-results meni__results"></div>
     </div>
     <div class="meni__main">
         <div class="meni__icons">
@@ -27,13 +28,6 @@
                         <a class="meni__a meni__a--{@title|slugify} js-meni-a js-meni--{@title|slugify} p" href="{@url}">{@title}</a>
                     </li>
                 {.end}
-                {# Iterate website.socialAccounts #}
-                <li class="meni__li meni__li--instagram">
-                    <a class="meni__a meni__a--instagram js-meni-a js-meni-ext js-meni--instagram m" href="#">Instagram</a>
-                </li>
-                <li class="meni__li meni__li--soundcloud">
-                    <a class="meni__a meni__a--soundcloud js-meni-a js-meni-ext js-meni--soundcloud m" href="#">Soundcloud</a>
-                </li>
             </ul>
         </nav>
         <div class="meni__footer js-meni-footer">
