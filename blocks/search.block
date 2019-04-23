@@ -1,7 +1,7 @@
 <div class="search js-search" data-block-json="{@|json|htmlattr}" data-results=".js-search-results" data-loader=".js-search-loader"></div>
-<div class="results">
+<div class="results -exp">
     <div class="results__loading js-search-loader">
-        {@|apply loading.block}
+        <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
     </div>
     <div class="results__content js-search-results"></div>
 </div>
