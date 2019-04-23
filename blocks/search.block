@@ -1,1 +1,7 @@
-<div class="search js-search" data-block-json="{@|json|htmlattr}"></div>
+<div class="search js-search" data-block-json="{@|json|htmlattr}" data-results=".js-search-results" data-loader=".js-search-loader"></div>
+<div class="results">
+    <div class="results__loading js-search-loader">
+        {@|apply loading.block}
+    </div>
+    <div class="results__content js-search-results"></div>
+</div>
