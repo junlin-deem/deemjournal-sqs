@@ -1,0 +1,3 @@
+<div class="-wrap -exp">
+    <div class="newsletter js-newsletter" data-block-json="{@|json|htmlattr}"></div>
+</div>
