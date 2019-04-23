@@ -1,3 +1,1 @@
-<div class="-wrap -exp">
-    <div class="search js-search" data-block-json="{@|json|htmlattr}"></div>
-</div>
+<div class="search js-search" data-block-json="{@|json|htmlattr}"></div>
