@@ -1,21 +1,18 @@
-<div class="story">
+<div class="story js-story" {.if item.customContent.colorBackground}data-hex="{item.customContent.colorBackground}"{.end}>
     <div class="story__cover">
-        <div class="story__masthead -wrap">
-            {.if item.customContent.h1RoobertMedium}
-                <h1>{item.title}</h1>
-            {.end}
-            {.if item.customContent.h1CheltenhamBook}
-                <h1 class="-fserif">{item.title}</h1>
-            {.end}
-            {.if item.customContent.h2RoobertMedium}
-                <h2>{item.title}</h2>
-            {.end}
-            {.if item.customContent.h2CheltenhamBook}
-                <h2 class="-fserif">{item.title}</h2>
-            {.end}
-        </div>
+        {.if item.customContent.coverHorizontalBottom}
+            {@|apply story-masthead.block}
+            <div class="story__intro">
+                <div class="story__credits">
+                    {item.customContent.creditsText.html}
+                </div>
+                <div class="story__image">
+                    <img class="image js-lazy-image" data-img-src="{item.customContent.coverImage.assetUrl}" data-variants="{item.customContent.coverImage.systemDataVariants}" data-original-size="{item.customContent.coverImage.originalSize}" />
+                </div>
+            </div>
+        {.end}
     </div>
-    <div class="story__blocks cms">
+    <div class="story__blocks js-story-blocks cms">
         {item.body}
     </div>
 </div>
