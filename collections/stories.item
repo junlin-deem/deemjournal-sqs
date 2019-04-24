@@ -1,4 +1,4 @@
-<div class="story -exp">
+<div class="story">
     <div class="story__cover">
         <div class="story__masthead -wrap">
             {.if item.customContent.h1RoobertMedium}
