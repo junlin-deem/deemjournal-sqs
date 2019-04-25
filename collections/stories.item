@@ -1,14 +1,21 @@
-<div class="story js-story" {.if item.customContent.colorBackground}data-hex="{item.customContent.colorBackground}"{.end}>
-    <div class="story__cover">
+<div class="story js-story" {.if item.customContent.colorBackground}data-hex="{item.customContent.colorBackground}"{.end} {.if item.customContent.lightText}data-lit="{item.customContent.lightText}"{.end}>
+    <div class="story__cover {.if item.customContent.coverHorizontalBottom}story__cover--hb{.end}{.if item.customContent.coverHorizontalTop}story__cover--ht{.end}">
         {.if item.customContent.coverHorizontalBottom}
             {@|apply story-masthead.block}
-            <div class="story__intro">
-                <div class="story__credits">
-                    {item.customContent.creditsText.html}
-                </div>
-                <div class="story__image">
-                    <img class="image js-lazy-image" data-img-src="{item.customContent.coverImage.assetUrl}" data-variants="{item.customContent.coverImage.systemDataVariants}" data-original-size="{item.customContent.coverImage.originalSize}" />
-                </div>
+            <div class="story__flex">
+                {@|apply story-credits.block}
+                {@|apply story-image.block}
+            </div>
+            <div class="story__flex-sh">
+                {@|apply story-excerpt.block}
+            </div>
+        {.end}
+        {.if item.customContent.coverHorizontalTop}
+            {@|apply story-image.block}
+            {@|apply story-masthead.block}
+            <div class="story__flex">
+                {@|apply story-credits.block}
+                {@|apply story-excerpt.block}
             </div>
         {.end}
     </div>
