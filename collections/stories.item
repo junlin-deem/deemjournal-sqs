@@ -2,21 +2,10 @@
     <div class="story__cover {.if item.customContent.coverHorizontalBottom}story__cover--hb{.end}{.if item.customContent.coverHorizontalTop}story__cover--ht{.end}">
         {.if item.customContent.coverHorizontalBottom}
             {@|apply story-masthead.block}
-            <div class="story__flex">
-                {@|apply story-credits.block}
-                {@|apply story-image.block}
-            </div>
-            <div class="story__flex-sh">
-                {@|apply story-excerpt.block}
-            </div>
         {.end}
         {.if item.customContent.coverHorizontalTop}
             {@|apply story-image.block}
             {@|apply story-masthead.block}
-            <div class="story__flex">
-                {@|apply story-credits.block}
-                {@|apply story-excerpt.block}
-            </div>
         {.end}
     </div>
     <div class="story__blocks js-story-blocks cms">
