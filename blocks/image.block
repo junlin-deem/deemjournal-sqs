@@ -1,22 +1,29 @@
-{.if item}
-    {.var @media item}
-{.or}
-    {.var @media @}
-{.end}
-
-{.if info}
-    {.var @caption info.description|safe}
-{.or}
-    {.var @caption false}
-{.end}
-<div class="media js-media {.if info}{.if info.stretch}media--stretch{.or}{.end}{.end}">
-    <div class="media__node">
-        <img class="media__el js-media-node image js-lazy-image" data-img-src="{@media.assetUrl}" data-variants="{@media.systemDataVariants}" data-original-size="{@media.originalSize}" />
-    </div>
-    {.if @caption}
-        <div class="media__cap">
-            <div class="m">{@caption}</div>
+<div class="media js-media {.if info.stretch}media--stretch{.end}">
+    {.equal? info.designLayout "card"}
+        <div class="media__card media__card--{info.imagePosition}">
+            <div class="media__title">
+                <div class="h2">{info.subtitle|safe}</div>
+            </div>
+            <div class="media__node">
+                <img class="media__el js-media-node image js-lazy-image" data-img-src="{item.assetUrl}" data-variants="{item.systemDataVariants}" data-original-size="{item.originalSize}" />
+            </div>
         </div>
+    {.or}
+        <div class="media__node">
+            <img class="media__el js-media-node image js-lazy-image" data-img-src="{item.assetUrl}" data-variants="{item.systemDataVariants}" data-original-size="{item.originalSize}" />
+        </div>
+        {.equal? info.layout "caption-hidden"}{.or}
+            {.if info.description}
+                <div class="media__cap">
+                    <div class="m">{info.description|safe}</div>
+                </div>
+            {.end}
+        {.end}
     {.end}
 </div>
 <script>console.log( {@|json-pretty} );</script>
+{#
+    info.designLayout
+    info.imagePosition
+    info.subtitle|safe
+#}
