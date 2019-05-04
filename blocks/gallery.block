@@ -17,6 +17,6 @@
             {.end}
         </div>
     {.or}
-        {# grid? #}
+        {# 3 or more === grid?, triptych? #}
     {.end}
 {.end}
