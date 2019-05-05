@@ -34,8 +34,8 @@
     {.end}
 {.or equal? options.design "slider"}
     <div class="slider js-slider">
-        {.repeated section items}
-            <div class="slider__wrap">
+        <div class="slider__wrap">
+            {.repeated section items}
                 <div class="slider__item">
                     <div class="media js-media">
                         <div class="media__wrap">
@@ -46,8 +46,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        {.end}
+            {.end}
+        </div>
     </div>
 {.end}
-<script>console.log( {@|json-pretty} );</script>
