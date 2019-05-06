@@ -8,6 +8,7 @@
                     <div class="media js-media">
                         <div class="media__wrap">
                             <img class="image js-lazy-image" data-img-src="{assetUrl}" data-variants="{systemDataVariants}" data-original-size="{originalSize}" />
+                            <div class="image--squarespace-config"></div>
                             {.if body}
                                 <div class="media__cap m -grey">{body|safe}</div>
                             {.end}
@@ -16,6 +17,39 @@
                 </div>
             {.end}
         </div>
+        <style>
+            .squarespace-config .body-block .diptych {
+                font-size: 0;
+                margin: 0 -5px;
+            }
+            .squarespace-config .body-block .diptych__item {
+                display: inline-block;
+                width: 50%;
+                vertical-align: top;
+                padding: 5px;
+                box-sizing: border-box;
+            }
+            .squarespace-config .body-block .diptych__item .image--squarespace-config {
+                position: relative;
+                width: 100%;
+                padding-bottom: 100%;
+            }
+            .squarespace-config .body-block .diptych__item .image--squarespace-config:after {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                left: 0;
+                top: 0;
+                background-size: cover;
+                background-position: 50% 50%;
+            }
+            {.repeated section items}
+                .squarespace-config .diptych__item:nth-child( {@index} ) .image--squarespace-config:after {
+                    background-image: url( {assetUrl} );
+                }
+            {.end}
+        </style>
     {.or equal? @length 3}
         <div class="grid">
             {.repeated section items}
@@ -23,6 +57,7 @@
                     <div class="media js-media">
                         <div class="media__wrap">
                             <img class="image js-lazy-image" data-img-src="{assetUrl}" data-variants="{systemDataVariants}" data-original-size="{originalSize}" />
+                            <div class="image--squarespace-config"></div>
                             {.if body}
                                 <div class="media__cap m -grey">{body|safe}</div>
                             {.end}
@@ -50,37 +85,37 @@
             {.end}
         </div>
     </div>
-{.end}
-<style>
-    .squarespace-config .body-block .slider__wrap {
-        font-size: 0;
-        margin: 0 -5px;
-    }
-    .squarespace-config .body-block .slider__item {
-        display: inline-block;
-        width: 33.333333%;
-        vertical-align: top;
-        padding: 5px;
-        box-sizing: border-box;
-    }
-    .squarespace-config .body-block .slider__item .image--squarespace-config {
-        position: relative;
-        width: 100%;
-        padding-bottom: 100%;
-    }
-    .squarespace-config .body-block .slider__item .image--squarespace-config:after {
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        left: 0;
-        top: 0;
-        background-size: cover;
-        background-position: 50% 50%;
-    }
-    {.repeated section items}
-        .squarespace-config .slider__item:nth-child( {@index} ) .image--squarespace-config:after {
-            background-image: url( {assetUrl} );
+    <style>
+        .squarespace-config .body-block .slider__wrap {
+            font-size: 0;
+            margin: 0 -5px;
         }
-    {.end}
-</style>
+        .squarespace-config .body-block .slider__item {
+            display: inline-block;
+            width: 33.333333%;
+            vertical-align: top;
+            padding: 5px;
+            box-sizing: border-box;
+        }
+        .squarespace-config .body-block .slider__item .image--squarespace-config {
+            position: relative;
+            width: 100%;
+            padding-bottom: 100%;
+        }
+        .squarespace-config .body-block .slider__item .image--squarespace-config:after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            background-size: cover;
+            background-position: 50% 50%;
+        }
+        {.repeated section items}
+            .squarespace-config .slider__item:nth-child( {@index} ) .image--squarespace-config:after {
+                background-image: url( {assetUrl} );
+            }
+        {.end}
+    </style>
+{.end}
