@@ -61,6 +61,7 @@
         width: 33.333333%;
         vertical-align: top;
         padding: 5px;
+        box-sizing: border-box;
     }
     .squarespace-config .body-block .slider__item .image--squarespace-config {
         position: relative;
@@ -82,7 +83,4 @@
             background-image: url( {assetUrl} );
         }
     {.end}
-<pre>
-{@|json-pretty}
-</pre>
 </style>
