@@ -1,5 +1,5 @@
 <div class="media media--audio">
     <div class="_audio js-audio" data-block-json="{@|json|htmlattr}">
-        <audio></audio>
+        <audio controls=""></audio>
     </div>
 </div>
