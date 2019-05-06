@@ -6,7 +6,9 @@
         background: black;
         color: white;
         border-bottom: 0;
-        display: block;
         border-radius: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 </style>
