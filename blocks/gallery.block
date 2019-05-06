@@ -66,6 +66,39 @@
                 </div>
             {.end}
         </div>
+        <style>
+            .squarespace-config .body-block .grid {
+                font-size: 0;
+                margin: 0 -5px;
+            }
+            .squarespace-config .body-block .grid__item {
+                display: inline-block;
+                width: 33.333333%;
+                vertical-align: top;
+                padding: 5px;
+                box-sizing: border-box;
+            }
+            .squarespace-config .body-block .grid__item .image--squarespace-config {
+                position: relative;
+                width: 100%;
+                padding-bottom: 100%;
+            }
+            .squarespace-config .body-block .grid__item .image--squarespace-config:after {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                left: 0;
+                top: 0;
+                background-size: cover;
+                background-position: 50% 50%;
+            }
+            {.repeated section items}
+                .squarespace-config .grid__item:nth-child( {@index} ) .image--squarespace-config:after {
+                    background-image: url( {assetUrl} );
+                }
+            {.end}
+        </style>
     {.end}
 {.or equal? options.design "slider"}
     <div class="slider js-slider">
