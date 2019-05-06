@@ -119,6 +119,9 @@
         </div>
     </div>
     <style>
+        .squarespace-config .body-block .slider {
+            white-space: nowrap;
+        }
         .squarespace-config .body-block .slider__wrap {
             font-size: 0;
             margin: 0 -5px;
