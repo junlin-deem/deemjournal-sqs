@@ -50,3 +50,6 @@
         </div>
     </div>
 {.end}
+<script>
+    console.log( "DEEM::gallery.block", window.CONFIG_PANEL );
+</script>
