@@ -1,5 +1,5 @@
 <a class="_button js-button_" href="{buttonLink}" {.if newWindow}target="_blank"{.end} data-block-json="{@|json|htmlattr}">{buttonText}</a>
-<style>
+<style class="js-sqs-config-style">
     .squarespace-config .body-block ._button {
         height: 60px;
         width: 200px;
