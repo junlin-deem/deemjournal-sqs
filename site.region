@@ -33,26 +33,25 @@
                 <squarespace:navigation navigationId="navi" template="navi" />
             </div>
         </header>
-        <main class="main js-main" data-content-field="main-content">
-            <section class="main__section js-main-section" data-revision="{squarespace.template-revision}" data-website-id="{website.id}" {.section collection}data-collection-id="{collection.id}" data-collection-title="{.if collection.homepage}{website.siteTitle}{.or}{collection.title} – {website.siteTitle}{.end}"{.end} {.section item}data-item-id="{item.id}" data-item-title="{item.title} – {collection.title} – {website.siteTitle}"{.end}>
-                {.equal? collection.id "5caf91cf9b747a24508cf1ec"}
-                    {@|apply page-about.block}
-                {.or equal? collection.id "5caf951ff9619aaf383bd7c7"}
-                    {@|apply page-stockists.block}
-                {.or equal? collection.id "5caf91f653450a71df5772b6"}
-                    {@|apply page-contact.block}
-                {.or equal? collection.id "5cafe527652deaad3c6230dd"}
-                    {@|apply page-typography.block}
-                {.or equal? collection.id "5cafe53bb208fcfd8dc661dd"}
-                    {@|apply page-system-blocks.block}
-                {.or equal? collection.id "5cb63e938165f5675d20dcb6"}
-                    {@|apply page-iconography.block}
-                {.or}
-                    {squarespace.main-content}
-                {.end}
-            </section>
-        </main>
+        <main class="main js-main" data-content-field="main-content"></main>
         <squarespace:navigation navigationId="menu" template="menu" />
+        <div class="router js-router" data-revision="{squarespace.template-revision}" data-website-id="{website.id}" {.section collection}data-collection-id="{collection.id}" data-collection-title="{.if collection.homepage}{website.siteTitle}{.or}{collection.title} – {website.siteTitle}{.end}"{.end} {.section item}data-item-id="{item.id}" data-item-title="{item.title} – {collection.title} – {website.siteTitle}"{.end}>
+            {.equal? collection.id "5caf91cf9b747a24508cf1ec"}
+                {@|apply page-about.block}
+            {.or equal? collection.id "5caf951ff9619aaf383bd7c7"}
+                {@|apply page-stockists.block}
+            {.or equal? collection.id "5caf91f653450a71df5772b6"}
+                {@|apply page-contact.block}
+            {.or equal? collection.id "5cafe527652deaad3c6230dd"}
+                {@|apply page-typography.block}
+            {.or equal? collection.id "5cafe53bb208fcfd8dc661dd"}
+                {@|apply page-system-blocks.block}
+            {.or equal? collection.id "5cb63e938165f5675d20dcb6"}
+                {@|apply page-iconography.block}
+            {.or}
+                {squarespace.main-content}
+            {.end}
+        </div>
         <div class="search search--block js-search-block">
             <squarespace:block-field id="deem--search" columns="12" />
         </div>

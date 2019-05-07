@@ -8,7 +8,7 @@
                     <div class="media js-media">
                         <div class="media__wrap">
                             <img class="image js-lazy-image" data-img-src="{assetUrl}" data-variants="{systemDataVariants}" data-original-size="{originalSize}" />
-                            <div class="image--squarespace-config"></div>
+                            <div class="js-sqs-config-image"></div>
                             {.if body}
                                 <div class="media__cap m -grey">{body|safe}</div>
                             {.end}
@@ -29,12 +29,12 @@
                 padding: 5px;
                 box-sizing: border-box;
             }
-            .squarespace-config .body-block .diptych__item .image--squarespace-config {
+            .squarespace-config .body-block .diptych__item .js-sqs-config-image {
                 position: relative;
                 width: 100%;
                 padding-bottom: 100%;
             }
-            .squarespace-config .body-block .diptych__item .image--squarespace-config:after {
+            .squarespace-config .body-block .diptych__item .js-sqs-config-image:after {
                 content: "";
                 position: absolute;
                 width: 100%;
@@ -45,7 +45,7 @@
                 background-position: 50% 50%;
             }
             {.repeated section items}
-                .squarespace-config .diptych__item:nth-child( {@index} ) .image--squarespace-config:after {
+                .squarespace-config .diptych__item:nth-child( {@index} ) .js-sqs-config-image:after {
                     background-image: url( {assetUrl} );
                 }
             {.end}
@@ -57,7 +57,7 @@
                     <div class="media js-media">
                         <div class="media__wrap">
                             <img class="image js-lazy-image" data-img-src="{assetUrl}" data-variants="{systemDataVariants}" data-original-size="{originalSize}" />
-                            <div class="image--squarespace-config"></div>
+                            <div class="js-sqs-config-image"></div>
                             {.if body}
                                 <div class="media__cap m -grey">{body|safe}</div>
                             {.end}
@@ -78,12 +78,12 @@
                 padding: 5px;
                 box-sizing: border-box;
             }
-            .squarespace-config .body-block .grid__item .image--squarespace-config {
+            .squarespace-config .body-block .grid__item .js-sqs-config-image {
                 position: relative;
                 width: 100%;
                 padding-bottom: 100%;
             }
-            .squarespace-config .body-block .grid__item .image--squarespace-config:after {
+            .squarespace-config .body-block .grid__item .js-sqs-config-image:after {
                 content: "";
                 position: absolute;
                 width: 100%;
@@ -94,7 +94,7 @@
                 background-position: 50% 50%;
             }
             {.repeated section items}
-                .squarespace-config .grid__item:nth-child( {@index} ) .image--squarespace-config:after {
+                .squarespace-config .grid__item:nth-child( {@index} ) .js-sqs-config-image:after {
                     background-image: url( {assetUrl} );
                 }
             {.end}
@@ -108,7 +108,7 @@
                     <div class="media js-media">
                         <div class="media__wrap">
                             <img class="image js-lazy-image" data-img-src="{assetUrl}" data-variants="{systemDataVariants}" data-original-size="{originalSize}" />
-                            <div class="image--squarespace-config"></div>
+                            <div class="js-sqs-config-image"></div>
                             {.if body}
                                 <div class="media__cap m -grey">{body|safe}</div>
                             {.end}
@@ -133,12 +133,12 @@
             padding: 5px;
             box-sizing: border-box;
         }
-        .squarespace-config .body-block .slider__item .image--squarespace-config {
+        .squarespace-config .body-block .slider__item .js-sqs-config-image {
             position: relative;
             width: 100%;
             padding-bottom: 100%;
         }
-        .squarespace-config .body-block .slider__item .image--squarespace-config:after {
+        .squarespace-config .body-block .slider__item .js-sqs-config-image:after {
             content: "";
             position: absolute;
             width: 100%;
@@ -149,7 +149,7 @@
             background-position: 50% 50%;
         }
         {.repeated section items}
-            .squarespace-config .slider__item:nth-child( {@index} ) .image--squarespace-config:after {
+            .squarespace-config .slider__item:nth-child( {@index} ) .js-sqs-config-image:after {
                 background-image: url( {assetUrl} );
             }
         {.end}

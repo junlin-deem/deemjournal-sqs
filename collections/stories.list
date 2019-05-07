@@ -1,5 +1,7 @@
-<div class="stories -exp -wrap" data-collection-id="{collection.id}">
-    <h1>{collection.title}</h1>
+<div class="stories -exp" data-collection-id="{collection.id}">
+    <div class="-wrap">
+        <h1>{collection.title}</h1>
+    </div>
     <div class="grid">
         {.repeated section items}
             <div class="grid__item">
