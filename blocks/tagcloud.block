@@ -2,7 +2,7 @@
     <p>Tags:</p>
     <p>
         {.repeated section items}
-            &nbsp;&nbsp;&nbsp;&nbsp;<a href="{url}">{name}</a>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href="{url}">{name}</a><br />
         {.end}
     </p>
 </div>
