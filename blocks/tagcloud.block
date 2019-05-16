@@ -1,6 +1,6 @@
 <div class="tagcloud js-tagcloud">
-    <p class="m">Tags:</p>
-    <p class="m">
+    <p class="h6">Tags:</p>
+    <p class="h6">
         {.repeated section items}
             &nbsp;&nbsp;&nbsp;&nbsp;<a href="{url}">{name}</a><br />
         {.end}
