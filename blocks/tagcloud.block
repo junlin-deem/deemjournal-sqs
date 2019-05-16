@@ -6,4 +6,3 @@
         {.end}
     </p>
 </div>
-<script>console.log( {@|json-pretty} );</script>
