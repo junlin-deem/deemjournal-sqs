@@ -1,6 +1,1 @@
 <div class="product js-product" data-shopping-cart="{shoppingCart|json|htmlattr}" data-item="{item|json|htmlattr}"></div>
-<div class="js-product-helpers p -exp -wrap">
-    <div>{@|product-price}</div>
-    <div>{@|product-status}</div>
-    <div>{@|product-checkout}</div>
-</div>
