@@ -2,4 +2,22 @@
     <script type="application/json">{@|json}</script>
     <input type="text" name="" value="{description.html|safe}" />
     <button type="button" name="button">{form.submitButtonText}</button>
+    <style class="js-sqs-config-style">
+        .squarespace-config .body-block .newsletter input {
+            border: 1px solid #d8d8d8;
+            font-size: 24px;
+            padding: 16px 32px;
+            line-height: 1;
+            -webkit-appearance: none;
+        }
+        .squarespace-config .body-block .newsletter button {
+            border: 0;
+            font-size: 24px;
+            padding: 16px 32px;
+            line-height: 1;
+            -webkit-appearance: none;
+            color: white;
+            background-color: black;
+        }
+    </style>
 </div>
