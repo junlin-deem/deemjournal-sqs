@@ -1,3 +1,5 @@
 <div class="newsletter js-newsletter">
     <script type="application/json">{@|json}</script>
+    <input type="text" name="" value="{description.html|safe}" />
+    <button type="button" name="button">{form.submitButtonText}</button>
 </div>
