@@ -1,0 +1,68 @@
+{.var @h1RoobertMedium item.customContent.h1RoobertMedium}
+{.var @h1CheltenhamBook item.customContent.h1CheltenhamBook}
+{.var @h2RoobertMedium item.customContent.h2RoobertMedium}
+{.var @h2CheltenhamBook item.customContent.h2CheltenhamBook}
+{.var @bgColor item.customContent.colorBackground}
+{.var @uiColor item.customContent.colorElements}
+{.var @hiColor item.customContent.highlightColor}
+<article data-item-id="{item.id}" {.if @bgColor}data-hex="{@bgColor}"{.end} class="story js-story {.if @h1RoobertMedium}h1RoobertMedium{.end} {.if @h1CheltenhamBook}h1CheltenhamBook{.end} {.if @h2RoobertMedium}h2RoobertMedium{.end} {.if @h2CheltenhamBook}h2CheltenhamBook{.end}">
+    <div class="story__blocks">
+        {item.body}
+    </div>
+    <style class="js-colorway-style">
+        {.if @bgColor}
+            html,
+            .header {
+                background-color: {@bgColor};
+            }
+            .cta--global ._button,
+            .cta--global ._button:hover,
+            ._audio__global ._audio__state {
+                color: {@bgColor};
+            }
+            ._audio__global ._svg {
+                fill: {@bgColor};
+            }
+        {.end}
+        {.if @uiColor}
+            html,
+            ._button,
+            ._button:hover,
+            ._audio__station .h6,
+            ._audio__ellapsed.h6,
+            .cta__text p,
+            .annotation blockquote p,
+            .sqs-block-tagcloud .sqs-block-content a span {
+                color: {@uiColor};
+            }
+            .navi__a.is-active,
+            .is-hoverable .navi__a:hover,
+            .is-hoverable .navi__a.is-active:hover,
+            .sqs-block-tagcloud .sqs-block-content a span {
+                border-bottom-color: {@uiColor};
+            }
+            .header__logo ._svg,
+            .navi__li--menu ._svg,
+            ._audio__station ._svg {
+                fill:  {@uiColor};
+            }
+            .summary-v2 {
+                border-top-color: {@uiColor};
+            }
+            ._button:before,
+            ._audio__controls:before {
+                border-color: {@uiColor};
+            }
+            .cta--global ._button:before,
+            ._audio__global ._audio__controls:before {
+                background-color: {@uiColor};
+            }
+        {.end}
+        {.if @hiColor}
+            p strong em,
+            p em strong {
+                background-color: {@hiColor};
+            }
+        {.end}
+    </style>
+</article>

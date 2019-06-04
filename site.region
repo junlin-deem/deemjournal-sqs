@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html class="is-{collection.title|slugify}-page {.if item}is-uid-page{.end}">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="apple-touch-icon" sizes="57x57" href="/assets/icons/apple-icon-57x57.png?v={squarespace.template-revision}" />
+        <link rel="apple-touch-icon" sizes="60x60" href="/assets/icons/apple-icon-60x60.png?v={squarespace.template-revision}" />
+        <link rel="apple-touch-icon" sizes="72x72" href="/assets/icons/apple-icon-72x72.png?v={squarespace.template-revision}" />
+        <link rel="apple-touch-icon" sizes="76x76" href="/assets/icons/apple-icon-76x76.png?v={squarespace.template-revision}" />
+        <link rel="apple-touch-icon" sizes="114x114" href="/assets/icons/apple-icon-114x114.png?v={squarespace.template-revision}" />
+        <link rel="apple-touch-icon" sizes="120x120" href="/assets/icons/apple-icon-120x120.png?v={squarespace.template-revision}" />
+        <link rel="apple-touch-icon" sizes="144x144" href="/assets/icons/apple-icon-144x144.png?v={squarespace.template-revision}" />
+        <link rel="apple-touch-icon" sizes="152x152" href="/assets/icons/apple-icon-152x152.png?v={squarespace.template-revision}" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-icon-180x180.png?v={squarespace.template-revision}" />
+        <link rel="icon" type="image/png" sizes="192x192"  href="/assets/icons/android-icon-192x192.png?v={squarespace.template-revision}" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png?v={squarespace.template-revision}" />
+        <link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/favicon-96x96.png?v={squarespace.template-revision}" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png?v={squarespace.template-revision}" />
+        <link rel="manifest" href="/assets/icons/manifest.json?v={squarespace.template-revision}" />
+        <meta name="msapplication-TileColor" content="#ffffff" />
+        <meta name="msapplication-TileImage" content="/assets/icons/ms-icon-144x144.png?v={squarespace.template-revision}" />
+        <meta name="theme-color" content="#ffffff" />
+        {squarespace-headers}
+    </head>
+    <body class="-fzero">
+        <header class="header js-header -wrap">
+            <div class="header__logo">
+                <a href="/">
+                    {@|apply svg-logo.block}
+                </a>
+            </div>
+            <div class="header__navi">
+                <squarespace:navigation navigationId="navi" template="navi" />
+            </div>
+        </header>
+        <main class="main js-main" data-content-field="main-content"></main>
+        <squarespace:navigation navigationId="menu" template="menu" />
+        <div class="router js-router" style="display:none;" data-revision="{squarespace.template-revision}" data-website-id="{website.id}" {.section collection}data-collection-id="{collection.id}" data-collection-title="{.if collection.homepage}{website.siteTitle}{.or}{collection.title} – {website.siteTitle}{.end}"{.end} {.section item}data-item-id="{item.id}" data-item-title="{item.title} – {collection.title} – {website.siteTitle}"{.end}>
+            {.equal? collection.id "5caf91cf9b747a24508cf1ec"}
+                {@|apply page-about.block}
+            {.or equal? collection.id "5caf951ff9619aaf383bd7c7"}
+                {@|apply page-stockists.block}
+            {.or equal? collection.id "5caf91f653450a71df5772b6"}
+                {@|apply page-contact.block}
+            {.or equal? collection.id "5cafe527652deaad3c6230dd"}
+                {@|apply page-typography.block}
+            {.or equal? collection.id "5cafe53bb208fcfd8dc661dd"}
+                {@|apply page-system-blocks.block}
+            {.or equal? collection.id "5cb63e938165f5675d20dcb6"}
+                {@|apply page-iconography.block}
+            {.or equal? collection.id "5cede595a4222fb991874131"}
+                {@|apply page-dev-cart.block}
+            {.or}
+                {squarespace.main-content}
+            {.end}
+        </div>
+        <div class="search search--block js-search-block" style="display:none;">
+            <squarespace:block-field id="deem--search" columns="12" />
+        </div>
+        <div class="newsletter newsletter--block js-newsletter-block" style="display:none;">
+            <squarespace:block-field id="deem--newsletter" columns="12" />
+        </div>
+        <div class="intro js-intro screen screen--dark -wrap is-active">
+            {@|apply svg-logo.block}
+        </div>
+        <script type="text/javascript" src="/scripts/app.js?v={squarespace.template-revision}"></script>
+        {squarespace-footers}
+    </body>
+</html>

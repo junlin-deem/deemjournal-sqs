@@ -1,0 +1,43 @@
+<menu class="meni js-meni" data-content-field="navigation-menu">
+    <div class="meni__fill js-meni-fill"></div>
+    <div class="meni__query js-meni-query">
+        <div class="search js-search meni__search" data-results=".js-search-results"></div>
+        <div class="filters js-search-filters"></div>
+        <div class="results js-search-results meni__results">
+            <div class="results__loading js-search-loader">
+                {@|apply loading.block}
+            </div>
+            <div class="results__content js-search-display"></div>
+        </div>
+    </div>
+    <div class="meni__main">
+        <div class="meni__icons">
+            <div class="meni__search__icon js-meni-search">
+                {@|apply svg-search.block}
+            </div>
+            <div class="meni__close__icon js-meni-close">
+                {@|apply svg-x.block}
+            </div>
+        </div>
+        <nav class="meni__menu" data-content-field="menigation-menu">
+            <ul class="meni__navi">
+                {.repeated section items}
+                    {.if collection}
+                        {.var @title collection.title}
+                        {.var @url collection.fullUrl}
+                    {.end}
+                    {.if externalLink}
+                        {.var @title externalLink.title}
+                        {.var @url externalLink.url}
+                    {.end}
+                    <li class="meni__li meni__li--{@title|slugify}">
+                        <a class="meni__a meni__a--{@title|slugify} js-meni-a js-meni--{@title|slugify} p" href="{@url}">{@title}</a>
+                    </li>
+                {.end}
+            </ul>
+        </nav>
+        <div class="meni__footer js-meni-footer">
+            <div class="m">Made by <a class="js-meni-ext" href="http://roomformagic.com" target="_blank">Room For Magic</a></div>
+        </div>
+    </div>
+</menu>
