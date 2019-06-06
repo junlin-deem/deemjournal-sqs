@@ -1,6 +1,12 @@
+{.if clickthroughUrl}
+    {.var @url clickthroughUrl}
+{.end}
+{.if sourceUrl}
+    {.var @url sourceUrl}
+{.end}
 <div class="cover js-cover js-cover-scroll" data-cover="">
     <div class="cover__image -cover js-lazy-image" data-img-src="{assetUrl}" data-variants="{systemDataVariants}" data-original-size="{originalSize}"></div>
-    <a class="cover__title" href="{clickthroughUrl || sourceUrl}">
-        <h2>{title} <span>{customContent.ctaTextValue}</span>.</h2>
+    <a class="cover__title" href="{@url}">
+        <h2>{title} <span>{.if customContent.ctaTextValue}{customContent.ctaTextValue}{.or}View story{.end}</span>.</h2>
     </a>
 </div>
