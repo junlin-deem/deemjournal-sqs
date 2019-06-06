@@ -3,7 +3,7 @@
         {.if items}
             {.repeated section items}
                 {.equal? customContent.customType "customCover"}
-                    {@|apply covers.block}
+                    {@|apply cover.block}
                 {.end}
             {.end}
         {.end}
