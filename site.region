@@ -50,8 +50,6 @@
                     {squarespace.main-content}
                 {.or equal? collection.urlId "shop"}
                     {squarespace.main-content}
-                {.or equal? collection.urlId "homepage"}
-                    {squarespace.main-content}
                 {.or}
                     {@|apply page-navi.block}
                 {.end}
