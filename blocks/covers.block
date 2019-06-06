@@ -8,3 +8,6 @@
 {.section item}
     <div class="cover"></div>
 {.end}
+{.if customContent}
+    <div class="cover"></div>
+{.end}
