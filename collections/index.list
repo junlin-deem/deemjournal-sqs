@@ -1,5 +1,11 @@
 {.section collection}
     {.repeated section collections}
-        {squarespace.main-content}
+        {.if items}
+            {#.equal? customContent.customType "customCover"#}
+            {@|apply covers.block}
+        {.end}
+        {.if mainContent}
+            {mainContent}
+        {.end}
     {.end}
 {.end}

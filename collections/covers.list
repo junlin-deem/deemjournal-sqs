@@ -1,5 +1,1 @@
-<div class="covers">
-    {.repeated section items}
-        <div class="cover"></div>
-    {.end}
-</div>
+{@|apply covers.block}

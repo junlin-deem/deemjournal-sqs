@@ -1,0 +1,10 @@
+{.section items}
+    <div class="covers">
+        {.repeated section @}
+            <div class="cover"></div>
+        {.end}
+    </div>
+{.end}
+{.section item}
+    <div class="cover"></div>
+{.end}

@@ -1,5 +1,6 @@
+{.var @length items|count}
 <div class="summary-v2 js-summary-v2">
-    <div class="grid">
+    <div class="grid grid--length-{@length}">
         {.repeated section items}
             <div class="grid__item js-summary-v2-item js-summary-v2-item--{id}">
                 <a class="grid__link" href="{fullUrl}">
