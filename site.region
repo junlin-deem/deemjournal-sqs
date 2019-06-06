@@ -43,9 +43,12 @@
                 {@|apply page-system-blocks.block}
             {.or equal? collection.urlId "iconography"}
                 {@|apply page-iconography.block}
-            {.or equal? collection.id "dev-cart"}
+            {.or equal? collection.urlId "dev-cart"}
                 {@|apply page-dev-cart.block}
             {# Main Nav #}
+            {.or equal? collection.urlId "stories"}
+            {.or equal? collection.urlId "shop"}
+                {squarespace.main-content}
             {.or}
                 {@|apply page-navi.block}
             {.end}
