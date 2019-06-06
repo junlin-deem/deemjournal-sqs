@@ -1,8 +1,10 @@
 {.section collection}
     {.repeated section collections}
         {.if items}
-            {.equal? items.0.customContent.customType "customCover"}
-                {@|apply covers.block}
+            {.section items.0}
+                {.equal? customContent.customType "customCover"}
+                    {@|apply covers.block}
+                {.end}
             {.end}
         {.end}
         {.if mainContent}
