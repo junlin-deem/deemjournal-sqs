@@ -47,6 +47,7 @@
                 {@|apply page-dev-cart.block}
             {# Main Nav #}
             {.or equal? collection.urlId "stories"}
+                {squarespace.main-content}
             {.or equal? collection.urlId "shop"}
                 {squarespace.main-content}
             {.or}
