@@ -24,6 +24,7 @@
             .cover--{id} .cover__title span {
                 color: {@textColor};
             }
+            .cover--{id} .navi__a.is-active,
             .cover--{id} .cover__title span {
                 border-bottom-color: {@textColor};
             }
