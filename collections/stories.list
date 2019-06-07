@@ -23,7 +23,7 @@
         {.end}
         {.repeated section items}
             {.if starred}{.or}
-                <div class="grid__item js-grid-anim">
+                <div class="grid__item js-lazy-anim">
                     <a class="grid__link grid__anim" href="{fullUrl}" data-item-id="{id}">
                         <img class="grid__image image js-lazy-image" data-img-src="{assetUrl}" data-variants="{systemDataVariants}" data-original-size="{originalSize}" />
                         <div class="grid__info">
