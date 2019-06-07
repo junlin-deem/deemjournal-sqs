@@ -10,9 +10,11 @@
 <div class="cover cover--{id} {.if customContent.blurToCrisp}cover--blur{.end} {.if customContent.crispToBlur}cover--crisp{.end} js-cover" data-id="{id}">
     <div class="cover__color"></div>
     <div class="cover__image -cover js-lazy-image" data-img-src="{assetUrl}" data-variants="{systemDataVariants}" data-original-size="{originalSize}"></div>
-    <a class="cover__title" href="{@url}">
-        <h2>{title} <span class="js-cover-cta">{.if customContent.ctaTextValue}{customContent.ctaTextValue}{.or}View story{.end}</span></h2>
-    </a>
+    <div class="cover__hover">
+        <a class="cover__title" href="{@url}">
+            <h2>{title} <span class="js-cover-cta">{.if customContent.ctaTextValue}{customContent.ctaTextValue}{.or}View story{.end}</span></h2>
+        </a>
+    </div>
     <style class="js-colorway-style">
         {.if @bgColor}
             .cover--{id} .cover__color {
