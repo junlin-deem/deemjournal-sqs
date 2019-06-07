@@ -4,9 +4,9 @@
 {.if sourceUrl}
     {.var @url sourceUrl}
 {.end}
-{.var @bgColor item.customContent.colorBackground}
-{.var @uiColor item.customContent.colorUI}
-{.var @textColor item.customContent.colorText}
+{.var @bgColor customContent.colorBackground}
+{.var @uiColor customContent.colorUI}
+{.var @textColor customContent.colorText}
 <div class="cover cover--{id} {.if customContent.blurToCrisp}cover--blur{.end} {.if customContent.crispToBlur}cover--crisp{.end} js-cover js-cover-scroll" data-id="{id}">
     <div class="cover__color"></div>
     <div class="cover__image -cover js-lazy-image" data-img-src="{assetUrl}" data-variants="{systemDataVariants}" data-original-size="{originalSize}"></div>
@@ -20,8 +20,12 @@
             }
         {.end}
         {.if @textColor}
-            .cover--{id} .cover__title {
+            .cover--{id} .cover__title,
+            .cover--{id} .cover__title span {
                 color: {@textColor};
+            }
+            .cover--{id} .cover__title span {
+                border-bottom-color: {@textColor};
             }
         {.end}
         {.if @uiColor}
