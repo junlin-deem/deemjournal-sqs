@@ -6,7 +6,7 @@
         {.end}
     </div>
 </div>
-<div class="tagcloud-query js-tagcloud-query">
+<div class="tagcloud-query js-tagcloud-query screen screen--dark">
     <div class="tagcloud-query__label -wrap">
         <input type="text" class="tagcloud-query__input search__input inp js-tagcloud-field" name="" placeholder="" />
         <div class="tagcloud-query__close js-tagcloud-close">
