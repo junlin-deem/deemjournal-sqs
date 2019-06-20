@@ -1,4 +1,4 @@
-<article class="story story--{collection.urlId} js-story">
+<article class="story story--{collection.urlId} js-story {.if collection.homepage}js-puppet-master{.end}">
     <div class="story__blocks">
         {squarespace.main-content}
     </div>

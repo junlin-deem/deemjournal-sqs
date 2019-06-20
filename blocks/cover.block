@@ -9,12 +9,12 @@
 {.var @textColor customContent.colorText}
 <div class="cover cover--{id} {.if customContent.blurToCrisp}cover--blur{.end} {.if customContent.crispToBlur}cover--crisp{.end} js-cover" data-id="{id}">
     <div class="cover__color"></div>
-    <div class="cover__image -cover js-lazy-cover-image" data-img-src="{assetUrl}" data-variants="{systemDataVariants}" data-original-size="{originalSize}"></div>
+    <div class="cover__image -cover js-lazy-cover-image js-puppet" data-img-src="{assetUrl}" data-variants="{systemDataVariants}" data-original-size="{originalSize}"></div>
     <div class="cover__hover">
-        <a class="cover__title" href="{@url}">
+        <a class="cover__title js-puppet" href="{@url}">
             <h3>{title} <span>{.if customContent.ctaTextValue}{customContent.ctaTextValue}{.or}View story{.end}</span></h3>
         </a>
-        <div class="cover__icon">
+        <div class="cover__icon js-puppet">
             {@|apply svg-right.block}
         </div>
     </div>
