@@ -12,6 +12,10 @@
                         <a class="pinned__image" href="{@clickUrl}" data-item-id="{@clickId}">
                             <img class="image js-lazy-image" data-img-src="{assetUrl}" data-variants="{systemDataVariants}" data-original-size="{originalSize}" />
                         </a>
+                    {.or}
+                        <a class="pinned__image" href="{@clickUrl}" data-item-id="{@clickId}">
+                            <img class="image js-lazy-image" data-img-src="{assetUrl}" data-variants="{systemDataVariants}" data-original-size="{originalSize}" />
+                        </a>
                     {.end}
                 </div>
             {.end}
