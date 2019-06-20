@@ -1,3 +1,4 @@
+{.var @isHomepage collection.homepage}
 {.section collection}
     {.repeated section collections}
         {.if items}
@@ -8,10 +9,14 @@
             {.end}
         {.end}
         {.if mainContent}
-            {mainContent}
+            <div class="story__page-content {.if @isHomepage}js-scene{.end}">
+                {mainContent}
+            </div>
         {.end}
     {.end}
 {.end}
 {.if collection.homepage}
-    <squarespace:block-field id="deem--footer" columns="12" />
+    <div class="story__footer js-scene">
+        <squarespace:block-field id="deem--footer" columns="12" />
+    </div>
 {.end}
