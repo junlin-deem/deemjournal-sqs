@@ -10,7 +10,7 @@
         {.end}
         {.if mainContent}
             <div class="story__page-content {.if @isHomepage}js-scene{.end}">
-                {.if @isHomepage}<div class="fixture js-puppet" data-wipe="1" data-speed="5"></div>{.end}
+                {.if @isHomepage}<div class="fixture js-puppet" data-wipe="1" data-speed="100"></div>{.end}
                 {mainContent}
             </div>
         {.end}
