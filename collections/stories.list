@@ -1,9 +1,22 @@
 <div class="stories js-stories" data-collection-id="{collection.id}">
-    <div class="grid">
-        <squarespace:query collection="{collection.urlId}" featured="true">
-            <script>console.log({items|count});</script>
-            {.repeated section items}
-                {.if starred}
+    <squarespace:query collection="{collection.urlId}" featured="true">
+        {.var @total items|count}
+        {.greaterThan? @total 1}
+            <div class="grid grid--length-2">
+                {.repeated section items}
+                    <div class="grid__item js-lazy-anim">
+                        <a class="grid__link grid__anim" href="{fullUrl}" data-item-id="{id}">
+                            <img class="grid__image image js-lazy-image" data-img-src="{assetUrl}" data-variants="{systemDataVariants}" data-original-size="{originalSize}" />
+                            <div class="grid__info">
+                                <div class="grid__title" data-content-field="title">{title}{.if customContent.ctaTextValue}, <span>{customContent.ctaTextValue}</span>{.end}</div>
+                            </div>
+                        </a>
+                    </div>
+                {.end}
+            </div>
+        {.or}
+            <div class="grid">
+                {.repeated section items}
                     {.var @clickUrl fullUrl}
                     {.var @clickId id}
                     <div class="pinned grid__pinned">
@@ -21,8 +34,10 @@
                         {.end}
                     </div>
                 {.end}
-            {.end}
-        </squarespace:query>
+            </div>
+        {.end}
+    </squarespace:query>
+    <div class="grid">
         {.repeated section items}
             {.if starred}{.or}
                 <div class="grid__item js-lazy-anim">
