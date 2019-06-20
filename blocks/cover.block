@@ -15,6 +15,9 @@
             <h2>{title} <span>{.if customContent.ctaTextValue}{customContent.ctaTextValue}{.or}View story{.end}</span></h2>
         </a>
     </div>
+    <div class="cover__icon">
+        {@|apply svg-right.block}
+    </div>
     <style class="js-colorway-style">
         {.if @bgColor}
             .cover--{id} .cover__color {
