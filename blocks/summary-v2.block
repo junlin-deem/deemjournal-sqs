@@ -46,5 +46,4 @@
             }
         {.end}
     </style>
-    <script>console.log("summary-v2.block", {@|json-pretty});</script>
 </div>
