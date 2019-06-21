@@ -1,5 +1,5 @@
 {.var @length items|count}
-<div class="summary-v2 js-summary-v2 js-puppet" data-pull="1" data-speed="5">
+<div class="summary-v2 js-summary-v2">
     <div class="grid grid--length-{@length}">
         {.repeated section items}
             <div class="grid__item js-summary-v2-item js-summary-v2-item--{id} js-lazy-anim">
