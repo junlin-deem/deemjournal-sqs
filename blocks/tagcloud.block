@@ -22,3 +22,8 @@
         <div class="results__content js-tagcloud-display"></div>
     </div>
 </div>
+<style class="js-sqs-config-style">
+    .squarespace-config .body-block .tagcloud-query {
+        display: none;
+    }
+</style>
