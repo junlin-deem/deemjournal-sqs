@@ -8,34 +8,8 @@
                 {.end}
             {.end}
         {.end}
-        {.equal? urlId "homepage-stories"}
-            <squarespace:query collection="stories" category="Homepage">
-                {.var @length items|count}
-                <div class="grid grid--length-{@length}">
-                    {.repeated section items}
-                        <div class="grid__item">
-                            <a class="grid__link grid__anim" href="{fullUrl}">
-                                {.equal? @length 2}
-                                    {.section customContent.pinnedImage}
-                                        <img class="grid__image image js-lazy-image" data-img-src="{assetUrl}" data-variants="{systemDataVariants}" data-original-size="{originalSize}" />
-                                    {.or}
-                                        <img class="grid__image image js-lazy-image" data-img-src="{assetUrl}" data-variants="{systemDataVariants}" data-original-size="{originalSize}" />
-                                    {.end}
-                                {.or}
-                                    <img class="grid__image image js-lazy-image" data-img-src="{assetUrl}" data-variants="{systemDataVariants}" data-original-size="{originalSize}" />
-                                {.end}
-                                <div class="grid__info">
-                                    <div class="grid__title" data-content-field="title">{title}{.if customContent.ctaTextValue}, <span>{customContent.ctaTextValue}</span>{.end}</div>
-                                </div>
-                            </a>
-                        </div>
-                    {.end}
-                </div>
-            </squarespace:query>
-        {.or}
-            {.if mainContent}
-                {mainContent}
-            {.end}
+        {.if mainContent}
+            {mainContent}
         {.end}
     {.end}
 {.end}
