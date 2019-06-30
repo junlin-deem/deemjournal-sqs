@@ -5034,10 +5034,6 @@ var router = {
         // pre-load & lazy-load images
         this.loadImages().on("preloaded", function () {
             _this2.onImagesPreloaded();
-        }).on("preload", function (data) {
-            data.element.style.paddingBottom = "0";
-        }).on("lazyload", function (data) {
-            data.element.style.paddingBottom = "0";
         });
 
         // debounce re-load images?
