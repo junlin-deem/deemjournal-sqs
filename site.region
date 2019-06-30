@@ -58,7 +58,7 @@
             <squarespace:block-field id="deem--search" columns="12" />
         </div>
         <div class="intro js-intro screen screen--dark is-active"></div>
-        <script type="text/javascript" src="/scripts/app.js?v={squarespace.template-revision}"></script>
+        <script type="text/javascript" src="/scripts/deem.js?v={squarespace.template-revision}"></script>
         {squarespace-footers}
     </body>
 </html>
