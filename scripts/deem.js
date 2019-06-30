@@ -5028,8 +5028,8 @@ var router = {
         this.preDetermineDom();
 
         // Dbug
-        this.onImagesPreloaded();
-        return;
+        // this.onImagesPreloaded();
+        // return;
 
         // pre-load & lazy-load images
         this.loadImages().on("preloaded", function () {
