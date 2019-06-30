@@ -117,11 +117,11 @@ var _router = __webpack_require__(51);
 
 var _router2 = _interopRequireDefault(_router);
 
-var _intro = __webpack_require__(108);
+var _intro = __webpack_require__(106);
 
 var _intro2 = _interopRequireDefault(_intro);
 
-var _navi = __webpack_require__(106);
+var _navi = __webpack_require__(104);
 
 var _navi2 = _interopRequireDefault(_navi);
 
@@ -132,7 +132,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 // Load the SASS
-__webpack_require__(109);
+__webpack_require__(107);
 
 // Load the JS
 
@@ -4881,7 +4881,7 @@ var _core = __webpack_require__(5);
 
 var core = _interopRequireWildcard(_core);
 
-var _navi = __webpack_require__(106);
+var _navi = __webpack_require__(104);
 
 var _navi2 = _interopRequireDefault(_navi);
 
@@ -7294,6 +7294,8 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 // import Newsletter from "./components/Newsletter";
 
+// import Issue from "./components/Issue";
+
 
 var _BaseController = __webpack_require__(59);
 
@@ -7331,11 +7333,7 @@ var _Commerce = __webpack_require__(97);
 
 var _Commerce2 = _interopRequireDefault(_Commerce);
 
-var _Issue = __webpack_require__(103);
-
-var _Issue2 = _interopRequireDefault(_Issue);
-
-var _Cover = __webpack_require__(105);
+var _Cover = __webpack_require__(103);
 
 var _Cover2 = _interopRequireDefault(_Cover);
 
@@ -7398,7 +7396,7 @@ var Controllers = function () {
             this.controllers = [];
 
             this.push("cover", this.element.find(".js-cover"), _BaseController2.default, _Cover2.default);
-            this.push("issue", this.element.find(".js-issue"), _BaseController2.default, _Issue2.default);
+            // this.push( "issue", this.element.find( ".js-issue" ), BaseController, Issue );
             // this.push( "newsletter", this.element.find( ".js-newsletter" ), BaseController, Newsletter );
             this.push("search", this.element.find(".js-search"), _BaseController2.default, _Search2.default);
             this.push("audio", this.element.find(".js-audio"), _BaseController2.default, _Audio2.default);
@@ -7416,8 +7414,6 @@ var Controllers = function () {
     }, {
         key: "destroy",
         value: function destroy() {
-            // core.emitter.off( "app--resize", this.__appResize );
-
             this.kill();
         }
     }]);
@@ -18280,107 +18276,6 @@ Object.defineProperty(exports, "__esModule", {
 });
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-// import $ from "properjs-hobo";
-
-
-var _core = __webpack_require__(5);
-
-var core = _interopRequireWildcard(_core);
-
-var _issue = __webpack_require__(104);
-
-var _issue2 = _interopRequireDefault(_issue);
-
-var _Stack = __webpack_require__(102);
-
-var _Stack2 = _interopRequireDefault(_Stack);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-/**
- *
- * @public
- * @global
- * @class Issue
- * @param {Element} element The element to work with
- * @classdesc Handle product blocks for issue module.
- *
- */
-var Issue = function () {
-    function Issue(element) {
-        _classCallCheck(this, Issue);
-
-        this.element = element;
-        this.script = this.element.find("script").detach();
-        this.blockJson = JSON.parse(this.script[0].textContent);
-
-        this.init();
-    }
-
-    _createClass(Issue, [{
-        key: "init",
-        value: function init() {
-            this.element[0].innerHTML = (0, _issue2.default)(this);
-            this.stack = new _Stack2.default(this.element.find(".js-stack"));
-            core.util.loadImages(this.element.find(core.config.lazyImageSelector), core.util.noop);
-        }
-    }, {
-        key: "destroy",
-        value: function destroy() {
-            if (this.stack) {
-                this.stack.destroy();
-            }
-        }
-    }]);
-
-    return Issue;
-}();
-
-/******************************************************************************
- * Export
-*******************************************************************************/
-
-
-exports.default = Issue;
-
-/***/ }),
-/* 104 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-// import $ from "properjs-hobo";
-
-
-exports.default = function (instance) {
-    var item = instance.blockJson.product;
-    var image = item.items[1] || item.items[0];
-    var color = window.Y.Squarespace.Template.getTweakValue("issueModuleColor");
-
-    return "\n        <div class=\"stack stack--sub js-stack\" data-id=\"" + item.id + "\" id=\"stack-" + item.id + "\">\n            <style class=\"js-stack-style\">\n                html.is-stack--" + item.id + " {\n                    background-color: " + color + ";\n                }\n                .is-stack--" + item.id + " .navi__a {\n                    color: #fff;\n                }\n                .is-stack--" + item.id + " .navi__a.is-active,\n                .is-stack--" + item.id + ".is-hoverable .navi__a:hover {\n                    border-bottom-color: #fff;\n                }\n                .is-stack--" + item.id + " ._svg--list,\n                .is-stack--" + item.id + " ._svg--logo {\n                    fill: #fff;\n                }\n            </style>\n            <div class=\"stack__wrap js-stack-wrap\">\n                <img class=\"stack__image js-lazy-image\" data-img-src=\"" + image.assetUrl + "\" data-variants=\"" + image.systemDataVariants + "\" data-original-size=\"" + image.originalSize + "\" />\n                <div class=\"stack__info\">\n                    <h4 class=\"issue__title\">" + item.title + "</h4>\n                    <h6 class=\"issue__desc\">" + item.excerpt + "</h6>\n                    <a class=\"issue__button _button _button--lit\" href=\"" + item.fullUrl + "\">" + item.structuredContent.customAddButtonText + "</a>\n                </div>\n            </div>\n        </div>\n    ";
-};
-
-/***/ }),
-/* 105 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _core = __webpack_require__(5);
 
@@ -18545,7 +18440,7 @@ var Cover = function () {
 exports.default = Cover;
 
 /***/ }),
-/* 106 */
+/* 104 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18569,7 +18464,7 @@ var _Search = __webpack_require__(60);
 
 var _Search2 = _interopRequireDefault(_Search);
 
-var _hammerjs = __webpack_require__(107);
+var _hammerjs = __webpack_require__(105);
 
 var _hammerjs2 = _interopRequireDefault(_hammerjs);
 
@@ -18820,7 +18715,7 @@ var navi = {
 exports.default = navi;
 
 /***/ }),
-/* 107 */
+/* 105 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_RESULT__;/*! Hammer.JS - v2.0.7 - 2016-04-22
@@ -21466,7 +21361,7 @@ if (true) {
 
 
 /***/ }),
-/* 108 */
+/* 106 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21521,7 +21416,7 @@ var intro = {
 exports.default = intro;
 
 /***/ }),
-/* 109 */
+/* 107 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "../styles/screen.css";
