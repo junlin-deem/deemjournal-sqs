@@ -56,7 +56,7 @@
                     {@|apply page-navi.block}
                 {.end}
         </div>
-        <div style="display:none">
+        <div id="sqs-cart-hack" style="display:none">
             {squarespace.main-content}
         </div>
         <div class="search search--block js-search-block" style="display:none;">
