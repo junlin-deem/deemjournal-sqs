@@ -33,9 +33,7 @@
                 <squarespace:navigation navigationId="navi" template="navi" />
             </div>
         </header>
-        <main class="main js-main" data-content-field="main-content">
-            {squarespace.main-content}
-        </main>
+        <main class="main js-main" data-content-field="main-content"></main>
         <squarespace:navigation navigationId="menu" template="menu" />
         <div class="router js-router {squarespace.page-classes}" style="display:none;" data-revision="{squarespace.template-revision}" data-website-id="{website.id}" {.section collection}data-collection-id="{collection.id}" data-collection-title="{.if collection.homepage}{website.siteTitle}{.or}{collection.title} – {website.siteTitle}{.end}"{.end} {.section item}data-item-id="{item.id}" data-item-title="{item.title} – {collection.title} – {website.siteTitle}"{.end}>
             {# Dev Menu #}
@@ -57,6 +55,9 @@
                 {.or}
                     {@|apply page-navi.block}
                 {.end}
+        </div>
+        <div style="display:none">
+            {squarespace.main-content}
         </div>
         <div class="search search--block js-search-block" style="display:none;">
             <squarespace:block-field id="deem--search" columns="12" />
