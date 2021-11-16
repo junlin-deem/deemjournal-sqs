@@ -33,7 +33,7 @@
                 <squarespace:navigation navigationId="navi" template="navi" />
             </div>
         </header>
-        <main class="main js-main">
+        <main class="main js-main" data-content-field="main-content">
             {# Dev Menu #}
                 {.equal? collection.urlId "typography"}
                     {@|apply page-typography.block}
