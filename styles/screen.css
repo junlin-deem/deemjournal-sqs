@@ -4582,16 +4582,16 @@ h6 p {
 
 
 /* effects deem main page second header content space  */
-@media only screen and (max-width: 640px) {
+/* @media only screen and (max-width: 640px) {
   .sqs-block-spacer .sqs-block-content {
     padding-top: 30px;
     padding-bottom: 30px;
   }
-}
+} */
 
-.sqs-block-spacer.spacer-text .sqs-block-content {
+/* .sqs-block-spacer.spacer-text .sqs-block-content {
   padding-bottom: 0
-}
+} */
 
 .sqs-block-newsletter .sqs-block-content {
   padding-left: 3.90625vw;
@@ -4925,23 +4925,41 @@ text-indent: 5%;
 font-size: 16pt;
 }
 
-div.sqs-html-content h3 {
-color: purple;
-text-indent: 0%;
-font-size: 40pt;
-
+div.sqs-html-content blockquote h1 {
+  text-indent: 0%;
+  font-size: 60pt;
+  color: green;
 }
+
+div.sqs-html-content blockquote h2 {
+  color: orange;
+  font-size: 50pt;
+}
+
+div.sqs-html-content blockquote h3 {
+color: purple;
+text-indent: 5%;
+font-size: 40pt;
+}
+
+
 /* //edits caption p under story photos// */
 div.media__cap p {
-  font-size: 10pt;
+  font-size: 12pt;
   color:blue;
   text-indent: 0%;
 }
 
+/* play around with grabbing specific spacers and adjust size or display
+#block-yui_3_17_2_1_1696880850576_171343 {
+  display: none;
+} */
 
-/* sets color to spacer */
+/* sets color to spacer AND control size */
 div.sqs-block-spacer{
   background-color: red;
+    min-height: 100px;
+    max-height: 200px;
 }
 }
 
