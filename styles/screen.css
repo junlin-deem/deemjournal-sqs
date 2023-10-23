@@ -4942,12 +4942,36 @@ text-indent: 5%;
 font-size: 40pt;
 }
 
+/* edits navigation links at bottom of page */
+div.sqs-html-content a {
+font-size: 14pt;
+display: inline;
+/* margin-left: auto;
+margin-right: auto; */
+text-align: left;
+
+}
+
+div.tagcloud {
+  display: inline;
+}
+
+a.cover__title h3 {
+  text-indent: 0%;
+}
 
 /* //edits caption p under story photos// */
-div.media__cap p {
+div.media__cap  {
   font-size: 12pt;
   color:blue;
   text-indent: 0%;
+}
+
+div.newsletter{
+  background-color: rgba(128, 128, 0, 0.058);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* play around with grabbing specific spacers and adjust size or display
@@ -5002,7 +5026,7 @@ div.sqs-block-spacer{
   -moz-font-feature-settings: "liga" 0, "clig" 0, "dlig" 0, "ss02", "ss03";
   -webkit-font-feature-settings: "liga" 0, "clig" 0, "dlig" 0, "ss02", "ss03";
   font-feature-settings: "liga" 0, "clig" 0, "dlig" 0, "ss02", "ss03";
-  position: relative
+  position: relative;
 }
 
 .-fserif .sqs-block-html .sqs-block-content>ul>li,
