@@ -4569,9 +4569,10 @@ h6 p {
   height: 2px
 }
 
-.sqs-block-spacer {
-  pointer-events: none
-}
+/* how do we make spacer editable?  */
+/* .sqs-block-spacer {
+  pointer-events: none;
+} */
 
 .sqs-block-spacer .sqs-block-content {
   height: 0 !important;
@@ -4652,6 +4653,8 @@ h6 p {
   }
 }
 
+
+/* potentially how to edit blockquotes */
 .sqs-block-gallery .sqs-block-content .slider+blockquote p {
   font-size: 16px;
   line-height: 1.5;
@@ -4661,7 +4664,7 @@ h6 p {
   width: 100%;
   max-width: 1000px
 }
-
+/* or this? */
 .-fserif .sqs-block-gallery .sqs-block-content .slider+blockquote p {
   font-family: "CheltenhamPro-Light";
   font-stretch: normal;
@@ -4913,6 +4916,33 @@ h6 p {
     margin-left: auto;
     display: block
   }
+
+
+  /* EDITABLE P text indent FOR STORIES! */
+div.sqs-html-content p {
+color:red;
+text-indent: 5%;
+font-size: 16pt;
+}
+
+div.sqs-html-content h3 {
+color: purple;
+text-indent: 0%;
+font-size: 40pt;
+
+}
+/* //edits caption p under story photos// */
+div.media__cap p {
+  font-size: 10pt;
+  color:blue;
+  text-indent: 0%;
+}
+
+
+/* sets color to spacer */
+div.sqs-block-spacer{
+  background-color: red;
+}
 }
 
 @media only screen and (max-width: 1680px) {
