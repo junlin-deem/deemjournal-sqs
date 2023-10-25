@@ -2333,7 +2333,7 @@ h6 p {
   -moz-font-feature-settings: "liga", "clig", "dlig" 0, "ss01", "ss03", "ss04";
   -webkit-font-feature-settings: "liga", "clig", "dlig" 0, "ss01", "ss03", "ss04";
   font-feature-settings: "liga", "clig", "dlig" 0, "ss01", "ss03", "ss04";
-  color: #000
+  color: #000;
 }
 
 @media only screen and (min-width: 640px) {
@@ -4574,11 +4574,10 @@ h6 p {
   pointer-events: none;
 } */
 
-.sqs-block-spacer .sqs-block-content {
+/* .sqs-block-spacer .sqs-block-content {
   height: 0 !important;
-  padding-top: 60px;
-  padding-bottom: 60px;
-}
+
+} */
 
 
 /* effects deem main page second header content space  */
@@ -4934,6 +4933,7 @@ div.sqs-html-content blockquote h1 {
 div.sqs-html-content blockquote h2 {
   color: orange;
   font-size: 50pt;
+  text-indent: 0%;
 }
 
 div.sqs-html-content blockquote h3 {
@@ -4968,7 +4968,6 @@ div.media__cap  {
 }
 
 div.newsletter{
-  background-color: rgba(128, 128, 0, 0.058);
   display: block;
   margin-left: auto;
   margin-right: auto;
