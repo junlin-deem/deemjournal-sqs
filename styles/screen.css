@@ -4919,38 +4919,62 @@ h6 p {
 
   /* EDITABLE P text indent FOR STORIES! */
 div.sqs-html-content p {
-color:red;
 text-indent: 5%;
 font-size: 16pt;
 }
 
-div.sqs-html-content blockquote h1 {
+.sqs-html-content p {
   text-indent: 0%;
-  font-size: 60pt;
-  color: green;
 }
+
+/* heading */
+div.sqs-html-content blockquote h1 {
+text-indent: 5%;
+font-size: 65pt;
+
+}
+
 
 div.sqs-html-content blockquote h2 {
-  color: orange;
   font-size: 50pt;
-  text-indent: 0%;
+  text-indent: 5%;
 }
+
 
 div.sqs-html-content blockquote h3 {
-color: purple;
 text-indent: 5%;
 font-size: 40pt;
+
 }
+
+
+
+
+.sqs-block-content h2 {
+    font-size: 50pt;
+}
+
+.sqs-html-content h3 {
+    font-size: 45pt;
+    text-indent: 0%;
+}
+
+div.sqs-html-content  h1 {
+  text-indent: 0%;
+  font-size: 65pt;
+}
+
+
 
 /* edits navigation links at bottom of page */
-div.sqs-html-content a {
+
+/* div.sqs-html-content a {
 font-size: 14pt;
 display: inline;
-/* margin-left: auto;
-margin-right: auto; */
-text-align: left;
 
-}
+text-align: left;
+} */
+
 
 div.tagcloud {
   display: inline;
@@ -4960,12 +4984,15 @@ a.cover__title h3 {
   text-indent: 0%;
 }
 
+
+
 /* //edits caption p under story photos// */
-div.media__cap  {
+div.media__cap p  {
   font-size: 12pt;
-  color:blue;
   text-indent: 0%;
 }
+
+
 
 div.newsletter{
   display: block;
@@ -4980,11 +5007,11 @@ div.newsletter{
 
 /* sets color to spacer AND control size */
 div.sqs-block-spacer{
-  background-color: red;
-    min-height: 100px;
-    max-height: 200px;
+color: transparent;
 }
 }
+
+
 
 @media only screen and (max-width: 1680px) {
 
