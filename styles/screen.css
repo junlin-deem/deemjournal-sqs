@@ -5006,8 +5006,7 @@ div.newsletter{
 /* sets color to spacer AND control size */
 div.sqs-block-spacer{
 color: transparent;
-min-height: 200px ;
-max-height: 100px;
+
 }
 }
 
