@@ -5001,13 +5001,13 @@ div.newsletter{
 }
 
 /* play around with grabbing specific spacers and adjust size or display
-#block-yui_3_17_2_1_1696880850576_171343 {
-  display: none;
-} */
+
 
 /* sets color to spacer AND control size */
 div.sqs-block-spacer{
 color: transparent;
+min-height: 200px ;
+max-height: 100px;
 }
 }
 
