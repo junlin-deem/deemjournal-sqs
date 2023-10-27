@@ -4918,12 +4918,12 @@ h6 p {
 
 
   /* EDITABLE P text indent FOR STORIES! */
-div.sqs-html-content p {
+div.sqs-html-content  p {
 text-indent: 5%;
 font-size: 16pt;
 }
 
-.sqs-html-content p {
+.sqs-html-content blockquote p {
   text-indent: 0%;
 }
 
